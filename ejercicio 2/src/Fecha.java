@@ -46,6 +46,19 @@ public class Fecha {
         else return true;
     }
 
+    public void diasSiguientes(){
+        this.dia+=10;
+        int cantidadDeDias = diasDelMes();
+        if (this.dia>cantidadDeDias){
+            this.dia-=cantidadDeDias;
+            this.mes+=1;
+        }
+        if (this.mes==13){
+            this.mes=1;
+            this.año+=1;
+        }
+    }
+
     public static void main(String[] args){
         Fecha unaFecha = new Fecha(29,2,2023);
     }
