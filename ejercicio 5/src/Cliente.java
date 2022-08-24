@@ -6,8 +6,9 @@ public class Cliente {
     private String nombreCompleto;
     private int celular;
 
-    public void hacerCompra(){
+    public Compra hacerCompra(){
         ArrayList<Componente> listaDeComponentes = new ArrayList<>();
         Compra unaCompra = new Compra(this, listaDeComponentes);
+        return unaCompra;
     }
 }

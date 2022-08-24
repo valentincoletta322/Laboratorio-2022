@@ -31,6 +31,15 @@ public class Compra {
         return false;
     }
 
+    public String dispositivosPresentes(){
+        int entrada = 0, salida = 0;
+        for(Componente unComponente : this.listaDeComponentes){
+            if(unComponente.getClass().equals("DispositivoEntrada")) entrada++;
+            else if(unComponente.getClass().equals("DispositivoSalida")) salida++;
+        }
+        return "Dispositivos de entrada: "+entrada+" Dispositivos de salida: "+salida;
+    }
+
     public Cliente getClienteAsociado() {
         return clienteAsociado;
     }
