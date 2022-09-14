@@ -5,6 +5,7 @@ abstract class Prenda extends Elemento {
     private String estado;
 
     public Prenda() {
+        super();
         this.color = "Blanco";
         this.material = "Seda";
         this.marca = "T1";
