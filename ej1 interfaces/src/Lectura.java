@@ -4,6 +4,7 @@ abstract class Lectura extends Elemento {
     private int año;
 
     public Lectura(int codigo, String titulo, int año) {
+        super();
         this.codigo = codigo;
         this.titulo = titulo;
         this.año = año;
