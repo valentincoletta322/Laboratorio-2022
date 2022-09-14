@@ -1,4 +1,4 @@
-abstract class Lectura {
+abstract class Lectura extends Elemento {
     private int codigo;
     private String titulo;
     private int año;

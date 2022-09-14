@@ -4,6 +4,7 @@ public class Pantalon extends Prenda implements FuncionesDelSistema{
     private float largo;
 
     public Pantalon(float medidasCintura, float medidasCadera, float largo) {
+        super();
         this.medidasCintura = medidasCintura;
         this.medidasCadera = medidasCadera;
         this.largo = largo;

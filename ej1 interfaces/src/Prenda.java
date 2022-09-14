@@ -1,4 +1,4 @@
-abstract class Prenda {
+abstract class Prenda extends Elemento {
     private String color;
     private String material;
     private String marca;
@@ -8,7 +8,7 @@ abstract class Prenda {
         this.color = "Blanco";
         this.material = "Seda";
         this.marca = "T1";
-        this.estado = "Deplorable";
+        this.estado = "Buen estado";
     }
 
     public String getColor() {
