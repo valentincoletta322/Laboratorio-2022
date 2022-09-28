@@ -6,14 +6,17 @@ public class Alumno {
     private String nombre;
     private HashSet<Examen> examenes;
 
+    public Alumno(HashSet<Examen> examenes) {
+        this.dni = 1;
+        this.nombre="juan";
+        this.apellido="juano";
+        this.examenes = examenes;
+    }
+
     public boolean estaAprobado(){
 
         for(Examen unExamen:this.examenes){
-            if (unExamen.getClass().getSimpleName().equals("Oral")){
-                Oral oral = (Oral) unExamen;
-                if (oral.getSatisfaccion()==Satisfaccion.INSUFICIENTE) return false;
-            }
-            else if (unExamen.getNota()<6)return false;
+            if (!unExamen.estaAprobado()) return false;
         }
 
         return true;

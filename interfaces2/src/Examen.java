@@ -1,15 +1,8 @@
 import java.time.LocalDate;
 
-public class Examen {
+public abstract class Examen {
     private String fecha;
     private int duracion;
-    private float nota;
-
-    public Examen(String fecha, int duracion, float nota) {
-        this.fecha = fecha;
-        this.duracion = duracion;
-        this.nota = nota;
-    }
 
     public String getFecha() {
         return fecha;
@@ -27,11 +20,5 @@ public class Examen {
         this.duracion = duracion;
     }
 
-    public float getNota() {
-        return nota;
-    }
-
-    public void setNota(float nota) {
-        this.nota = nota;
-    }
+    abstract boolean estaAprobado();
 }
